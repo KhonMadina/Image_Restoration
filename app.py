@@ -80,4 +80,4 @@ def uploaded_file(filename):
 
 if __name__ == '__main__':
     print("Starting Flask app on http://127.0.0.1:5000/")
-    app.run(debug=True, threaded=True)  # Enable multithreading for concurrent requests
+    app.run(debug=True, threaded=True, port=os.getenv("PORT", 4000))  # Enable multithreading for concurrent requests  # Enable multithreading for concurrent requests
