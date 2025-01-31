@@ -79,5 +79,6 @@ def uploaded_file(filename):
     return send_from_directory(PROCESSED_FOLDER, filename)
 
 if __name__ == '__main__':
-    print("Starting Flask app on http://127.0.0.1:5000/")
-    app.run(debug=True, threaded=True, port=os.getenv("PORT", 4000))  # Enable multithreading for concurrent requests  # Enable multithreading for concurrent requests
+    print("Starting Flask app...")
+    app.run(host='0.0.0.0', port=int(os.getenv("PORT", 4000)), debug=True, threaded=True)
+
